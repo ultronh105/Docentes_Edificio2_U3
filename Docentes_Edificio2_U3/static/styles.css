@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    margin: 30px;
+    background: #f3f3f3;
+}
+
+h1 {
+    color: #003366;
+}
+
+table {
+    background: white;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+.errores-btn {
+    padding: 10px;
+    background: #cc0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

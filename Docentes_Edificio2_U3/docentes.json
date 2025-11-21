@@ -1,0 +1,17 @@
+[
+    {
+        "num_empleado": 3012,
+        "nombre": "Alan de Jesus Diaz Flores",
+        "especialidad": "Software"
+    },
+    {
+        "num_empleado": 3120,
+        "nombre": "Jose Luis Flores Leandro",
+        "especialidad": "Redes"
+    },
+    {
+        "num_empleado": 2909,
+        "nombre": "Gabriel Alejandro Reyes Morales",
+        "especialidad": "Entornos"
+    }
+]

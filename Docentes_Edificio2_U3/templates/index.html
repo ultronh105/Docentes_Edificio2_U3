@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Docentes — Edificio 2 UTC</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<h1>Sistema CRUD — Docentes del Edificio 2</h1>
+
+<button onclick="window.location='/toggle_errores'" class="errores-btn">
+    {{ 'Desactivar Errores' if errores else 'Activar Errores' }}
+</button>
+
+<h2>Lista de Docentes</h2>
+<table>
+    <tr>
+        <th>Número</th>
+        <th>Nombre</th>
+        <th>Especialidad</th>
+        <th>Acciones</th>
+    </tr>
+    {% for d in docentes %}
+    <tr>
+        <td>{{ d.num_empleado }}</td>
+        <td>{{ d.nombre }}</td>
+        <td>{{ d.especialidad }}</td>
+        <td>
+            <a href="/eliminar/{{ d.num_empleado }}">Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Agregar Docente</h2>
+<form action="/agregar" method="POST">
+    <input type="number" name="num" placeholder="Número de empleado" required>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="esp" placeholder="Especialidad" required>
+    <button>Agregar</button>
+</form>
+
+<h2>Actualizar Docente</h2>
+<form action="/actualizar" method="POST">
+    <input type="number" name="num" placeholder="Número a actualizar" required>
+    <input type="text" name="nombre" placeholder="Nuevo nombre" required>
+    <input type="text" name="esp" placeholder="Nueva especialidad" required>
+    <button>Actualizar</button>
+</form>
+
+<h2>Buscar Docente</h2>
+<form action="/buscar" method="POST">
+    <input type="number" name="buscar_num" placeholder="Número a buscar" required>
+    <button>Buscar</button>
+</form>
+
+</body>
+</html>
